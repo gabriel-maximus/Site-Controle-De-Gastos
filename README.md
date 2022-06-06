@@ -1,2 +1,4 @@
 # Site-Controle-De-Gastos
-Site em desenvolvimento para controle de gastos
+
+Site desenvolvido com o objetivo de estudar e aprofundar linguagens de desenvolvimento.
+Utilizado: HTML, CSS, Javascript e Firebase Auth.
