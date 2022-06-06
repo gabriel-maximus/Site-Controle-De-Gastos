@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, inicial-scale-1.0">
+	<title>Login - Controle de gastos</title>
+</head>
+<body>
+	<script src="script.js"></script>
+	<script src="loading.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-app-compat.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/9.8.1/firebase-auth-compat.js"></script>
+	<script>
+	const firebaseConfig = {
+    	apiKey: "AIzaSyAuva03-bY26wdrTJxsO50LRF5GPcJGG2E",
+    	authDomain: "controle-de-gastos-c59c9.firebaseapp.com",
+    	projectId: "controle-de-gastos-c59c9",
+    	storageBucket: "controle-de-gastos-c59c9.appspot.com",
+    	messagingSenderId: "627367591513",
+    	appId: "1:627367591513:web:7c36c4a7ca450775667b48"
+    };
+    firebase.initializeApp(firebaseConfig);
+	</script>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<form>
+		<div>
+			<div><label>Email:</label></div>
+			<input type="email" name="email" id="email" onchange="validateFields()" placeholder="seu@email.com">
+			<div class="error" id="erroEmail">Email inválido</div>
+		</div>
+		<div>	
+			<div><label>Senha:</label></div>
+			<input type="password" name="senha" id="senha" onchange="validateFields()" placeholder="Senha">
+			<div class="error">Senha é obrigatória</div>
+		</div>
+		<div>
+			<button type="button" class="clear" id="recuperar" disabled="true" onclick="recoverPassword()">Esqueceu a senha?</button>
+		</div>
+		<div>
+			<button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+		</div>	
+		<div>
+			<button type="button" id="registrar" onclick="register()">Registrar</button>
+		</div>
+	</form>
+
+</body>
+</html>
